@@ -17,16 +17,21 @@ html {
     scroll-behavior: smooth;
 }
 
-html, body {
+html,
+body {
     min-height: 100vh;
     background-color: var(--white);
     font-family: var(--oswald);
+    font-weight: 500;
     color: var(--black);
+    max-width: 100%;
+    margin: auto;
 }
 
 section {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -42,7 +47,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--black);
+    background-color: var(--blue);
     color: var(--white);
     padding: 10px;
     text-align: center;
@@ -54,6 +59,7 @@ nav a {
     color: var(--white);
     margin: 0 15px;
 }
+
 footer {
     background-color: var(--black);
     color: var(--white);
@@ -68,7 +74,8 @@ footer {
 }
 
 .logo {
-    max-width: 100px; /* Adjust as needed */
+    max-width: 100px;
+    /* Adjust as needed */
     height: auto;
 }
 
@@ -92,4 +99,343 @@ footer {
 .menu a {
     color: var(--white);
     text-decoration: none;
+}
+
+section#home {
+    background-color: var(--white);
+}
+
+#home {
+    text-align: center;
+}
+
+#home .home-content,
+#home .additional-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: auto;
+    max-width: 640px;
+    padding: 50px;
+
+}
+
+.additional-content .sub-heading {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 0.8em;
+}
+
+#home .additional-content p a {
+    color: var(--black);
+    /* Set the link color */
+    text-decoration: none;
+    /* Remove default underline */
+    border-bottom: 2px solid transparent;
+    /* Add a transparent underline */
+    transition: border-bottom 0.3s ease;
+    /* Add a smooth transition for the underline */
+}
+
+#home .additional-content p span.bold {
+    position: relative;
+    display: inline-block;
+    color: var(--black);
+}
+
+#home .additional-content p a.bold {
+    position: relative;
+    display: inline-block;
+    color: var(--black);
+}
+
+#home .additional-content p span.bold,
+#home .additional-content p a.bold {
+    position: relative;
+    display: inline-block;
+    color: var(--black);
+}
+
+#home .additional-content p a.bold:hover::before,
+#home .additional-content p a.bold:hover::after,
+#home .additional-content p span.bold:hover::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--blue);
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+#home .additional-content p a.bold:hover::before,
+#home .additional-content p a.bold:hover::after,
+#home .additional-content p span.bold:hover::before {
+    transition-delay: 0.1s;
+}
+
+#home .additional-content p a.bold:hover::before,
+#home .additional-content p a.bold:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+
+#home .additional-content p span.bold:hover::before {
+    transform-origin: bottom right;
+    transform: scaleX(1);
+}
+
+
+
+h1 {
+    font-family: var(--oswald);
+    font-size: 4rem;
+    margin-bottom: 2px;
+    color: var(--blue);
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 260px;
+}
+
+h1>span {
+    color: var(--black);
+}
+
+
+#home .additional-content {
+    text-align: center;
+    max-width: 640px;
+    margin: auto;
+    padding: 1px;
+}
+
+h1>span.blue-text {
+    color: var(--black);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.blue-text {
+    opacity: 0;
+    /* Initially set the opacity to 0 */
+    animation: fadeIn 10s forwards;
+    /* Apply the fade-in animation */
+}
+
+#home .additional-content h1 span.blue-text {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+    /* Adjust duration as needed */
+}
+
+
+#home .additional-content p {
+    font-family: var(--lato);
+    font-size: 30px;
+    line-height: 2;
+    color: var(--black);
+    margin-top: 1px;
+    margin-bottom: 1px;
+    font-weight: 550;
+    padding-bottom: 220px;
+}
+
+#home .additional-content p span.light {
+    color: #474646;
+    font-weight: normal;
+    font-size: 20px;
+    /* Resetting font-weight to normal for the rest of the text */
+}
+
+#home .additional-content p.thrive {
+    font-size: 34px;
+    font-weight: bold;
+}
+
+
+
+#home .additional-content p span.bold {
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--black);
+    /* Making "DENAURLEN" bold */
+}
+
+/* Add this style to your existing CSS */
+
+.bold-link-container {
+    position: relative;
+    display: inline-block;
+}
+
+.bold-link {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--black);
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.bold-link-container:hover .bold-link {
+    opacity: 1;
+}
+
+.bold-link {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.bold {
+    font-weight: bold;
+    color: var(--black);
+    /* Add this line to keep the color black */
+}
+
+.bold:hover {
+    /* Add any additional hover styles if needed */
+}
+
+
+.bold:hover .bold-link {
+    width: auto;
+    height: auto;
+    overflow: visible;
+}
+
+
+
+#about {
+    background-color: var(--white);
+    color: var(--black);
+    padding: 20px;
+    text-align: left;
+}
+
+#about h1 {
+    font-family: var(--oswald);
+    font-weight: 500;
+    color: var(--blue);
+    font-size: 3rem;
+    padding-top: 10px;
+    padding-bottom: 200px;
+
+}
+
+#about h1 {
+    font-family: var(--oswald);
+    color: var(--black);
+    /* Set the color for "About" */
+}
+
+#about h1 span.blue-color {
+    color: var(--blue);
+    /* Set the color for "Arya Minds" */
+}
+
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 100px;
+
+
+
+}
+
+.about-content p {
+    font-family: var(--lato);
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+
+
+}
+
+/* Space for animations on the right side */
+.animation-space {
+    margin-top: 20px;
+    /* Adjust as needed */
+}
+
+/* Animation styles (if you decide to add animations later) */
+.animated-word {
+    /* Add animation styles here */
+}
+
+#problem-statement {
+    background-color: var(--white);
+    color: var(--black);
+    padding: 10px;
+    text-align: center;
+    padding-bottom: 500px;
+
+}
+
+#problem-statement h2 {
+    font-family: var(--oswald);
+    color: var(--blue);
+}
+
+.problem-statement-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#problem-statement h2 {
+    color: var(--blue);
+    text-align: center;
+    font-family: var(--oswald);
+    font-weight: normal;
+    font-size: 3rem;
+    margin-bottom: 0;
+    /* Remove margin bottom to minimize space */
+}
+
+#problem-statement h2 span.black-color {
+    color: var(--black);
+    font-family: var(--oswald);
+    font-weight: normal;
+    font-size: 3rem;
+    margin-top: 0;
+    /* Remove margin top to minimize space */
+    padding-bottom: 0;
+    /* Remove padding bottom to minimize space */
+}
+
+
+
+
+.problem-statement-content p {
+    font-family: var(--lato);
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0cap;
 }
