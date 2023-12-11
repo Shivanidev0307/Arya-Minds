@@ -19,22 +19,31 @@ html {
 
 html,
 body {
+    margin: auto;
+
+    max-width: 100%;
     min-height: 100vh;
+
     background-color: var(--white);
+
+    color: var(--black);
     font-family: var(--oswald);
     font-weight: 500;
-    color: var(--black);
-    max-width: 100%;
-    margin: auto;
+
+    scroll-snap-type: y mandatory;
 }
 
 section {
-    height: 100vh;
+    min-height: 100vh;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     text-align: center;
+
+    scroll-snap-align: start;
 }
 
 section:nth-child(even) {
@@ -315,10 +324,6 @@ h1>span.blue-text {
     /* Add this line to keep the color black */
 }
 
-.bold:hover {
-    /* Add any additional hover styles if needed */
-}
-
 
 .bold:hover .bold-link {
     width: auto;
@@ -383,11 +388,6 @@ h1>span.blue-text {
 .animation-space {
     margin-top: 20px;
     /* Adjust as needed */
-}
-
-/* Animation styles (if you decide to add animations later) */
-.animated-word {
-    /* Add animation styles here */
 }
 
 #problem-statement {
