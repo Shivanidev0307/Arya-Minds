@@ -144,12 +144,16 @@ section#home {
     position: relative;
     display: inline-block;
     color: var(--black);
+
 }
 
 #home .additional-content p a.bold {
     position: relative;
     display: inline-block;
     color: var(--black);
+    font-weight: 500;
+    font-size: 30px;
+
 }
 
 #home .additional-content p span.bold,
@@ -337,7 +341,7 @@ h1>span.blue-text {
     color: var(--blue);
     font-size: 3rem;
     padding-top: 10px;
-    padding-bottom: 200px;
+    padding-bottom: 20px;
 
 }
 
@@ -369,8 +373,8 @@ h1>span.blue-text {
     line-height: 1.5;
     margin-top: 10px;
     margin-bottom: 20px;
-    padding-right: 20px;
     padding-top: 10px;
+
 
 
 }
@@ -438,4 +442,150 @@ h1>span.blue-text {
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 0cap;
+}
+
+#how-we-encountered {
+    background-color: var(--white);
+    padding: 50px;
+    text-align: center;
+}
+
+
+#how-we-encountered h2 {
+    font-family: var(--oswald);
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+#how-we-encountered h2 .black-view {
+    color: var(--black);
+    padding-top: 50px;
+}
+
+#how-we-encountered h2 span.black-view {
+    color: var(--blue);
+}
+
+.how-we-encountered-content {
+    font-family: var(--lato);
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: left;
+    padding-bottom: 160px;
+}
+
+#quote {
+    background-color: var(--white);
+    color: var(--black);
+    padding: 50px;
+    text-align: center;
+}
+
+.quote-content {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+blockquote {
+    font-family: var(--lato);
+    font-size: 24px;
+    line-height: 1.5;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+blockquote footer {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+#courses {
+    background-color: var(--white);
+    color: var(--black);
+    padding: 50px;
+    text-align: center;
+    padding-bottom: 400px;
+    padding-top: 20px;
+}
+
+.course-card {
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 10px;
+    /* Adjust as needed */
+    margin-top: 20px;
+    /* Adjust as needed */
+}
+
+#courses h1 {
+    font-family: var(--oswald);
+    color: var(--black);
+    font-weight: 200;
+    font-size: 50px;
+    padding-bottom: 20px;
+
+
+}
+
+#courses h2 {
+    font-family: var(--oswald);
+    color: var(--black);
+    font-weight: 200;
+    font-size: 2rem;
+
+}
+
+#courses h2 span.blue-far {
+    color: var(--blue);
+}
+
+#courses p {
+    font-family: var(--lato);
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+#courses h3 {
+    font-family: var(--oswald);
+    color: var(--blue);
+    font-weight: 200;
+    font-size: 2rem;
+    margin-top: 40px;
+    /* Adjust as needed */
+    margin-bottom: 20px;
+    /* Adjust as needed */
+    text-align: center;
+}
+
+#courses h3 span.black-far {
+    color: var(--black);
+}
+
+.exclusive-workshop {
+    font-family: var(--oswald);
+    color: var(--black);
+    font-weight: 200;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.exclusive-workshop span.blue-get {
+    color: var(--blue);
 }
